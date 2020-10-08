@@ -55,19 +55,20 @@
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dummyhead = new ListNode(0);
-        ListNode m = l1, n = p2, new = dummyhead;
+        ListNode m = l1, n = l2, newone = dummyhead;
         int temp = 0;
-        while (m != null || q != null){
+        while (m != null || n != null){
             int x = ( m != null)? m.val : 0;
             int y = ( n != null)? n.val : 0;
             int sum = temp + x + y;
             temp = sum / 10;
-            new.next = new ListNode(sum % 10);
+            newone.next = new ListNode(sum % 10);
+            newone = newone.next;
             if(m != null) m = m.next;
             if(n != null) n = n.next;
         }
         if (temp > 0){
-            new.list = new ListNode(temp);
+            newone.next = new ListNode(temp);
         }return dummyhead.next;
     }
 }
