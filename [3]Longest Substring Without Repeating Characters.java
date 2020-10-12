@@ -53,7 +53,7 @@ class Solution {
     public int lengthOfLongestSubstring(String s) {
         Set<Character> occ = new HashSet<Character>();
         int n = s.length();
-        int rk = -1; ans = 0;
+        int rk = -1,ans = 0;
         for(int i = 0; i <n ; ++i){
             if(i != 0){
                 occ.remove(s.charAt(i-1));
