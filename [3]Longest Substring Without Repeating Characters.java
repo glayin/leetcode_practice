@@ -62,7 +62,7 @@ class Solution {
                 occ.add(s.charAt(rk+1));
                 ++rk;
             }
-            ans = Math.max(ars, rk-i+1);
+            ans = Math.max(ans, rk-i+1);
         }
         return ans;
 
